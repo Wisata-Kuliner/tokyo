@@ -9,6 +9,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntranceViewController" customModule="goridepay" customModuleProvider="target">
             <connections>
+                <outlet property="cameraImageView" destination="r5k-2O-4yN" id="rFk-5w-VEK"/>
+                <outlet property="clockLabel" destination="9Vg-Sl-aRH" id="45k-OA-eZD"/>
+                <outlet property="dateLabel" destination="mwj-bJ-a5B" id="fdr-jd-HIE"/>
+                <outlet property="slideImageView" destination="rAc-XL-F2X" id="PVx-fx-Tkm"/>
+                <outlet property="slideLabel" destination="X10-W2-HUM" id="ZeM-fi-jP7"/>
+                <outlet property="slideView" destination="ekJ-NU-Moo" id="eOT-Jm-hvb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,10 +38,18 @@
                                     <color key="textColor" white="1" alpha="0.8358304794520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-XL-F2X">
+                                    <rect key="frame" x="0.0" y="1" width="47" height="55.5"/>
+                                    <color key="tintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.44956656678082191" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.32898116438356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="rAc-XL-F2X" firstAttribute="leading" secondItem="ekJ-NU-Moo" secondAttribute="leading" id="5q8-pa-Q84"/>
+                                <constraint firstItem="rAc-XL-F2X" firstAttribute="top" secondItem="ekJ-NU-Moo" secondAttribute="top" id="9Ma-TZ-qdG"/>
+                                <constraint firstAttribute="trailing" secondItem="rAc-XL-F2X" secondAttribute="trailing" constant="251" id="Uyo-9S-ghN"/>
                                 <constraint firstItem="X10-W2-HUM" firstAttribute="centerY" secondItem="ekJ-NU-Moo" secondAttribute="centerY" id="XTp-SK-3d2"/>
+                                <constraint firstAttribute="bottom" secondItem="rAc-XL-F2X" secondAttribute="bottom" id="bj9-ph-omk"/>
                                 <constraint firstItem="X10-W2-HUM" firstAttribute="centerX" secondItem="ekJ-NU-Moo" secondAttribute="centerX" id="nCw-NC-F9J"/>
                             </constraints>
                         </view>
@@ -43,21 +57,13 @@
                             <rect key="frame" x="342" y="35.5" width="57" height="56"/>
                             <color key="tintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-XL-F2X">
-                            <rect key="frame" x="29" y="36" width="63" height="56"/>
-                            <color key="tintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.44956656678082191" colorSpace="custom" customColorSpace="sRGB"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="0.45205479452054792" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="rAc-XL-F2X" firstAttribute="top" secondItem="RkP-vK-97X" secondAttribute="top" constant="35" id="AKy-Wr-ihe"/>
                         <constraint firstItem="r5k-2O-4yN" firstAttribute="leading" secondItem="ekJ-NU-Moo" secondAttribute="trailing" constant="15" id="Gfl-IN-kZn"/>
-                        <constraint firstItem="rAc-XL-F2X" firstAttribute="leading" secondItem="RkP-vK-97X" secondAttribute="leading" constant="29" id="Ivv-Y1-3Sp"/>
-                        <constraint firstAttribute="bottom" secondItem="rAc-XL-F2X" secondAttribute="bottom" constant="34.5" id="M8m-3O-bX3"/>
                         <constraint firstAttribute="trailing" secondItem="ekJ-NU-Moo" secondAttribute="trailing" constant="87" id="OrN-Bm-rxc"/>
                         <constraint firstAttribute="trailing" secondItem="r5k-2O-4yN" secondAttribute="trailing" constant="15" id="Yqn-iI-3qK"/>
                         <constraint firstItem="ekJ-NU-Moo" firstAttribute="top" secondItem="RkP-vK-97X" secondAttribute="top" constant="35" id="bF4-37-MZ5"/>
-                        <constraint firstAttribute="trailing" secondItem="rAc-XL-F2X" secondAttribute="trailing" constant="322" id="baD-if-81c"/>
                         <constraint firstItem="r5k-2O-4yN" firstAttribute="centerY" secondItem="RkP-vK-97X" secondAttribute="centerY" id="ipC-ZJ-xTi"/>
                         <constraint firstItem="r5k-2O-4yN" firstAttribute="top" secondItem="ekJ-NU-Moo" secondAttribute="top" id="n5P-6i-yOe"/>
                         <constraint firstItem="ekJ-NU-Moo" firstAttribute="centerY" secondItem="RkP-vK-97X" secondAttribute="centerY" id="oXQ-nk-oeS"/>
