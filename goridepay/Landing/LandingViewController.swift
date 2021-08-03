@@ -10,6 +10,9 @@ import UIKit
 
 class LandingViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var cameraImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
