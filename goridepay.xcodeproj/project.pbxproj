@@ -15,6 +15,8 @@
 		A118074826B708EE0066E519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118074626B708EE0066E519 /* LandingViewController.swift */; };
 		A118074926B708EE0066E519 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A118074726B708EE0066E519 /* LandingViewController.xib */; };
 		A118074C26B711F20066E519 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118074B26B711F20066E519 /* Utility.swift */; };
+		A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */; };
+		A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */; };
 		A1FAEDC326B5CBD70071616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC226B5CBD70071616B /* AppDelegate.swift */; };
 		A1FAEDC526B5CBD70071616B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC426B5CBD70071616B /* SceneDelegate.swift */; };
 		A1FAEDC726B5CBD70071616B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC626B5CBD70071616B /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		A118074626B708EE0066E519 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		A118074726B708EE0066E519 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		A118074B26B711F20066E519 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		A1FAEDBF26B5CBD70071616B /* goridepay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goridepay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FAEDC226B5CBD70071616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1FAEDC426B5CBD70071616B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A14411A626BC4DE900DA8E6F /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */,
+				A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		A1FAEDB626B5CBD60071616B = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 		A1FAEDC126B5CBD70071616B /* goridepay */ = {
 			isa = PBXGroup;
 			children = (
+				A14411A626BC4DE900DA8E6F /* Text */,
 				A118074A26B711D30066E519 /* Utils */,
 				A118074126B6F8D30066E519 /* Landing */,
 				A118074026B6F8AD0066E519 /* Entry */,
@@ -194,6 +208,7 @@
 			files = (
 				A118074926B708EE0066E519 /* LandingViewController.xib in Resources */,
 				A1FAEDCF26B5CBD90071616B /* LaunchScreen.storyboard in Resources */,
+				A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */,
 				A1FAEDCC26B5CBD90071616B /* Assets.xcassets in Resources */,
 				A118074526B6F95F0066E519 /* EntranceViewController.xib in Resources */,
 				A1FAEDCA26B5CBD70071616B /* Main.storyboard in Resources */,
@@ -209,6 +224,7 @@
 			files = (
 				A118074C26B711F20066E519 /* Utility.swift in Sources */,
 				A1FAEDC726B5CBD70071616B /* ViewController.swift in Sources */,
+				A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */,
 				A118073F26B6F4DD0066E519 /* TagNode.swift in Sources */,
 				A1FAEDD826B5CC2B0071616B /* CountNode.swift in Sources */,
 				A118073D26B6F4C20066E519 /* TagCell.swift in Sources */,

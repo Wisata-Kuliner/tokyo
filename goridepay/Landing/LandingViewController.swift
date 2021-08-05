@@ -10,6 +10,7 @@ import UIKit
 
 class LandingViewController: UIViewController {
 
+    @IBOutlet weak var messageImageView: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var cameraImageView: UIImageView!
     @IBOutlet weak var assitiveImageView: UIImageView!
@@ -24,6 +25,17 @@ class LandingViewController: UIViewController {
         // Do any additional setup after loading the view.
         assitiveButton()
         cameraApp()
+        messageApp()
+    }
+    
+    func messageApp() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chatTapped(tapGestureRecognizer:)))
+        messageImageView.isUserInteractionEnabled = true
+        messageImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func chatTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.navigationController!.pushViewController(ChatViewController(nibName: "ChatViewController", bundle: nil), animated: true)
     }
     
     func cameraApp() {

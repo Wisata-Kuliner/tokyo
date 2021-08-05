@@ -14,6 +14,7 @@
                 <outlet property="cameraImageView" destination="SRG-I9-O8B" id="A67-e9-OPN"/>
                 <outlet property="dragView" destination="i5M-Pr-FkT" id="xWq-7T-sJX"/>
                 <outlet property="lockImageView" destination="qnW-Cw-UPm" id="dSi-ii-fXJ"/>
+                <outlet property="messageImageView" destination="rMl-eB-riX" id="msH-tt-YxT"/>
                 <outlet property="photoImageView" destination="9Nn-uB-0JF" id="w9Q-UR-tjP"/>
                 <outlet property="safeView" destination="tba-yr-mYe" id="qto-Wp-bR4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
