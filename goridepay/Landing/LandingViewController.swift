@@ -13,7 +13,11 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var messageImageView: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var cameraImageView: UIImageView!
+    @IBOutlet weak var contactImageView: UIImageView!
+    @IBOutlet weak var reminderImageView: UIImageView!
     @IBOutlet weak var assitiveImageView: UIImageView!
+    @IBOutlet weak var podcastImageView: UIImageView!
+    @IBOutlet weak var cloudImageView: UIImageView!
     @IBOutlet weak var assitiveView: UIView!
     @IBOutlet var dragView: UIView!
     @IBOutlet weak var safeView: UIImageView!
@@ -26,6 +30,32 @@ class LandingViewController: UIViewController {
         assitiveButton()
         cameraApp()
         messageApp()
+        photoApp()
+        cloudApp()
+    }
+    
+    func cloudApp() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action:
+            #selector(cloudTapped(tapGestureRecognizer:)))
+        cloudImageView.isUserInteractionEnabled = true
+        cloudImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func cloudTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.navigationController!.pushViewController(MerchantViewController(nibName: "MerchantViewController", bundle: nil), animated: true)
+    }
+    
+    func photoApp() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(libraryTapped(tapGestureRecognizer:)))
+        photoImageView.isUserInteractionEnabled = true
+        photoImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func libraryTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
     func messageApp() {
@@ -103,7 +133,7 @@ class LandingViewController: UIViewController {
     @objc func assitiveDrag(gestureRecognizer: UIPanGestureRecognizer) {
         if gestureRecognizer.state == UIGestureRecognizer.State.began || gestureRecognizer.state == UIGestureRecognizer.State.changed {
             let translation = gestureRecognizer.translation(in: self.view)
-            print(gestureRecognizer.view!.center.x, gestureRecognizer.view!.center.y)
+//            print(gestureRecognizer.view!.center.x, gestureRecognizer.view!.center.y)
             if (gestureRecognizer.view!.center.y > 65 && gestureRecognizer.view!.center.y < 835) {
                 gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y + translation.y)
             }

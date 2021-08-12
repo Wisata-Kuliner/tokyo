@@ -12,10 +12,14 @@
                 <outlet property="assitiveImageView" destination="Tsq-WH-E01" id="s5B-tv-06Y"/>
                 <outlet property="assitiveView" destination="9Mz-in-0yt" id="b6o-oX-3HI"/>
                 <outlet property="cameraImageView" destination="SRG-I9-O8B" id="A67-e9-OPN"/>
+                <outlet property="cloudImageView" destination="WwW-05-9Wi" id="i57-gX-5WS"/>
+                <outlet property="contactImageView" destination="8Jq-cV-XEU" id="MpW-sD-Qie"/>
                 <outlet property="dragView" destination="i5M-Pr-FkT" id="xWq-7T-sJX"/>
                 <outlet property="lockImageView" destination="qnW-Cw-UPm" id="dSi-ii-fXJ"/>
                 <outlet property="messageImageView" destination="rMl-eB-riX" id="msH-tt-YxT"/>
                 <outlet property="photoImageView" destination="9Nn-uB-0JF" id="w9Q-UR-tjP"/>
+                <outlet property="podcastImageView" destination="q8X-dL-6kY" id="tfv-Mw-UGd"/>
+                <outlet property="reminderImageView" destination="8o7-W0-yh7" id="k2t-fb-09f"/>
                 <outlet property="safeView" destination="tba-yr-mYe" id="qto-Wp-bR4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11448AC26C549DC00ADA22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A11448AB26C549DC00ADA22E /* GoogleService-Info.plist */; };
+		A11448B026C54DCF00ADA22E /* MerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11448AE26C54DCF00ADA22E /* MerchantViewController.swift */; };
+		A11448B126C54DCF00ADA22E /* MerchantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11448AF26C54DCF00ADA22E /* MerchantViewController.xib */; };
+		A11448B426C55CBE00ADA22E /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11448B226C55CBE00ADA22E /* CustomerViewController.swift */; };
+		A11448B526C55CBE00ADA22E /* CustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11448B326C55CBE00ADA22E /* CustomerViewController.xib */; };
+		A11448B726C56D3000ADA22E /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11448B626C56D3000ADA22E /* Transfer.swift */; };
 		A118073A26B6F45C0066E519 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118073926B6F45C0066E519 /* ChannelCell.swift */; };
 		A118073D26B6F4C20066E519 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118073C26B6F4C20066E519 /* TagCell.swift */; };
 		A118073F26B6F4DD0066E519 /* TagNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118073E26B6F4DD0066E519 /* TagNode.swift */; };
@@ -17,6 +23,8 @@
 		A118074C26B711F20066E519 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118074B26B711F20066E519 /* Utility.swift */; };
 		A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */; };
 		A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */; };
+		A1F44C3E26BDAAE600DB7819 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */; };
+		A1F44C3F26BDAAE600DB7819 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */; };
 		A1FAEDC326B5CBD70071616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC226B5CBD70071616B /* AppDelegate.swift */; };
 		A1FAEDC526B5CBD70071616B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC426B5CBD70071616B /* SceneDelegate.swift */; };
 		A1FAEDC726B5CBD70071616B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC626B5CBD70071616B /* ViewController.swift */; };
@@ -27,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A11448AB26C549DC00ADA22E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A11448AE26C54DCF00ADA22E /* MerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewController.swift; sourceTree = "<group>"; };
+		A11448AF26C54DCF00ADA22E /* MerchantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantViewController.xib; sourceTree = "<group>"; };
+		A11448B226C55CBE00ADA22E /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		A11448B326C55CBE00ADA22E /* CustomerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerViewController.xib; sourceTree = "<group>"; };
+		A11448B626C56D3000ADA22E /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		A118073926B6F45C0066E519 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		A118073C26B6F4C20066E519 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		A118073E26B6F4DD0066E519 /* TagNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagNode.swift; sourceTree = "<group>"; };
@@ -37,6 +51,8 @@
 		A118074B26B711F20066E519 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		A1FAEDBF26B5CBD70071616B /* goridepay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goridepay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FAEDC226B5CBD70071616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1FAEDC426B5CBD70071616B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A11448AD26C54DAE00ADA22E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A11448AE26C54DCF00ADA22E /* MerchantViewController.swift */,
+				A11448AF26C54DCF00ADA22E /* MerchantViewController.xib */,
+				A11448B226C55CBE00ADA22E /* CustomerViewController.swift */,
+				A11448B326C55CBE00ADA22E /* CustomerViewController.xib */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		A118073B26B6F4AE0066E519 /* Tags */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A118074B26B711F20066E519 /* Utility.swift */,
+				A11448B626C56D3000ADA22E /* Transfer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -99,6 +127,8 @@
 			children = (
 				A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */,
 				A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */,
+				A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */,
+				A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -122,6 +152,7 @@
 		A1FAEDC126B5CBD70071616B /* goridepay */ = {
 			isa = PBXGroup;
 			children = (
+				A11448AD26C54DAE00ADA22E /* Firebase */,
 				A14411A626BC4DE900DA8E6F /* Text */,
 				A118074A26B711D30066E519 /* Utils */,
 				A118074126B6F8D30066E519 /* Landing */,
@@ -134,6 +165,7 @@
 				A1FAEDCB26B5CBD90071616B /* Assets.xcassets */,
 				A1FAEDCD26B5CBD90071616B /* LaunchScreen.storyboard */,
 				A1FAEDD026B5CBD90071616B /* Info.plist */,
+				A11448AB26C549DC00ADA22E /* GoogleService-Info.plist */,
 			);
 			path = goridepay;
 			sourceTree = "<group>";
@@ -207,10 +239,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A118074926B708EE0066E519 /* LandingViewController.xib in Resources */,
+				A11448AC26C549DC00ADA22E /* GoogleService-Info.plist in Resources */,
 				A1FAEDCF26B5CBD90071616B /* LaunchScreen.storyboard in Resources */,
 				A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */,
+				A11448B526C55CBE00ADA22E /* CustomerViewController.xib in Resources */,
 				A1FAEDCC26B5CBD90071616B /* Assets.xcassets in Resources */,
 				A118074526B6F95F0066E519 /* EntranceViewController.xib in Resources */,
+				A1F44C3F26BDAAE600DB7819 /* ChatTableViewCell.xib in Resources */,
+				A11448B126C54DCF00ADA22E /* MerchantViewController.xib in Resources */,
 				A1FAEDCA26B5CBD70071616B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,16 +259,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A118074C26B711F20066E519 /* Utility.swift in Sources */,
+				A11448B726C56D3000ADA22E /* Transfer.swift in Sources */,
 				A1FAEDC726B5CBD70071616B /* ViewController.swift in Sources */,
 				A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */,
 				A118073F26B6F4DD0066E519 /* TagNode.swift in Sources */,
 				A1FAEDD826B5CC2B0071616B /* CountNode.swift in Sources */,
 				A118073D26B6F4C20066E519 /* TagCell.swift in Sources */,
+				A11448B426C55CBE00ADA22E /* CustomerViewController.swift in Sources */,
 				A1FAEDC326B5CBD70071616B /* AppDelegate.swift in Sources */,
 				A1FAEDC526B5CBD70071616B /* SceneDelegate.swift in Sources */,
 				A118074426B6F95F0066E519 /* EntranceViewController.swift in Sources */,
+				A1F44C3E26BDAAE600DB7819 /* ChatTableViewCell.swift in Sources */,
 				A118074826B708EE0066E519 /* LandingViewController.swift in Sources */,
 				A118073A26B6F45C0066E519 /* ChannelCell.swift in Sources */,
+				A11448B026C54DCF00ADA22E /* MerchantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
