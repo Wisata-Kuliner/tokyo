@@ -20,7 +20,44 @@ class CustomerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        checkPreference()
         setPreference()
+    }
+    
+    func checkPreference() {
+//        let uuid = UIDevice.current.identifierForVendor!.uuidString
+        var uuid = UUID().uuidString
+        if (uuid != "8DBB1431-7503-4406-B1AD-D00408250727") {
+            print("CANNOT USE UUID")
+            uuid = "8DBB1431-7503-4406-B1AD-D00408250727"
+        }
+        let session = URLSession.shared
+        Transfer().callHeroku(
+            session: session,
+            address: "https://product-goridepay.herokuapp.com/customers?id=" + uuid,
+            contentType: "json",
+            parameters: [:],
+            requestMethod: "GET"
+        ) {
+            (responseArray, responseObject, responseString) in
+                // parse array here
+            if let prefs = responseArray[0]["prefs"] as? String {
+                for i in 0..<prefs.split(separator: ",").count {
+                    switch (prefs.split(separator: ",")[i]) {
+                    case "1":
+                        self.foodImageView.alpha = 0.5
+                    case "2":
+                        self.fashionImageView.alpha = 0.5
+                    case "3":
+                        self.lifestyleImageView.alpha = 0.5
+                    case "4":
+                        self.propertyImageView.alpha = 0.5
+                    default:
+                        continue
+                    }
+                }
+            }
+        }
     }
     
     func setPreference() {
@@ -88,14 +125,35 @@ class CustomerViewController: UIViewController {
         if (propertyImageView.alpha == 0.5) {
             parameters.append("4")
         }
-        let prefs = parameters.description
-        print(prefs)
-        //        let response = Transfer().callHeroku(
-        //            session: session,
-        //            address: "https://csui-bot-1.herokuapp.com/api/v1/login/",
-        //            contentType: "x-www-form-urlencoded",
-        //            parameters: parameters
-        //        )
+//        let prefs = parameters.description
+        let prefs = parameters.joined(separator: ",")
+//        print(prefs)
+        let session = URLSession.shared
+        let requests: [String: String] = [
+            "prefs": prefs
+        ]
+//        let uuid = UIDevice.current.identifierForVendor!.uuidString
+        var uuid = UUID().uuidString
+        if (uuid != "8DBB1431-7503-4406-B1AD-D00408250727") {
+            print("CANNOT USE UUID")
+            uuid = "8DBB1431-7503-4406-B1AD-D00408250727"
+        }
+        Transfer().callHeroku(
+            session: session,
+            address: "https://product-goridepay.herokuapp.com/customers/" + uuid,
+//            contentType: "x-www-form-urlencoded",
+            contentType: "json",
+            parameters: requests,
+            requestMethod: "PUT"
+        ) {
+            (responseArray, responseObject, responseString) in
+            if (responseString.split(separator: " ").count > 1 &&
+                responseString.split(separator: " ")[0] != "error") {
+                DispatchQueue.main.async {
+                    self.navigationController!.pushViewController(BroadcastTableViewController(nibName: "BroadcastTableViewController", bundle: nil), animated: true)
+                }
+            }
+        }
     }
     
     /*

@@ -23,6 +23,8 @@
 		A118074C26B711F20066E519 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118074B26B711F20066E519 /* Utility.swift */; };
 		A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */; };
 		A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */; };
+		A14C887E26CAD03700CE05CD /* BroadcastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C887C26CAD03700CE05CD /* BroadcastTableViewController.swift */; };
+		A14C887F26CAD03700CE05CD /* BroadcastTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14C887D26CAD03700CE05CD /* BroadcastTableViewController.xib */; };
 		A1F44C3E26BDAAE600DB7819 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */; };
 		A1F44C3F26BDAAE600DB7819 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */; };
 		A1FAEDC326B5CBD70071616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC226B5CBD70071616B /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 		A118074B26B711F20066E519 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A14411A726BC4E0A00DA8E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		A14C887C26CAD03700CE05CD /* BroadcastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastTableViewController.swift; sourceTree = "<group>"; };
+		A14C887D26CAD03700CE05CD /* BroadcastTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BroadcastTableViewController.xib; sourceTree = "<group>"; };
 		A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		A1FAEDBF26B5CBD70071616B /* goridepay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goridepay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,8 @@
 				A11448AF26C54DCF00ADA22E /* MerchantViewController.xib */,
 				A11448B226C55CBE00ADA22E /* CustomerViewController.swift */,
 				A11448B326C55CBE00ADA22E /* CustomerViewController.xib */,
+				A14C887C26CAD03700CE05CD /* BroadcastTableViewController.swift */,
+				A14C887D26CAD03700CE05CD /* BroadcastTableViewController.xib */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */,
 				A11448B526C55CBE00ADA22E /* CustomerViewController.xib in Resources */,
 				A1FAEDCC26B5CBD90071616B /* Assets.xcassets in Resources */,
+				A14C887F26CAD03700CE05CD /* BroadcastTableViewController.xib in Resources */,
 				A118074526B6F95F0066E519 /* EntranceViewController.xib in Resources */,
 				A1F44C3F26BDAAE600DB7819 /* ChatTableViewCell.xib in Resources */,
 				A11448B126C54DCF00ADA22E /* MerchantViewController.xib in Resources */,
@@ -261,6 +268,7 @@
 				A118074C26B711F20066E519 /* Utility.swift in Sources */,
 				A11448B726C56D3000ADA22E /* Transfer.swift in Sources */,
 				A1FAEDC726B5CBD70071616B /* ViewController.swift in Sources */,
+				A14C887E26CAD03700CE05CD /* BroadcastTableViewController.swift in Sources */,
 				A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */,
 				A118073F26B6F4DD0066E519 /* TagNode.swift in Sources */,
 				A1FAEDD826B5CC2B0071616B /* CountNode.swift in Sources */,

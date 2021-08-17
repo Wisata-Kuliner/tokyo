@@ -34,10 +34,11 @@ class MerchantViewController: UIViewController {
             session: session,
             address: "https://product-goridepay.herokuapp.com/login/",
             contentType: "json",
-            parameters: parameters) {
-                (response) in
-                if (response.split(separator: " ").count > 1 &&
-                    response.split(separator: " ")[0] != "error") {
+            parameters: parameters,
+            requestMethod: "POST") {
+                (responseArray, responseObject, responseString) in
+                if (responseString.split(separator: " ").count > 1 &&
+                    responseString.split(separator: " ")[0] != "error") {
                     DispatchQueue.main.async {
                         self.navigationController!.pushViewController(CustomerViewController(nibName: "CustomerViewController", bundle: nil), animated: true)
                     }

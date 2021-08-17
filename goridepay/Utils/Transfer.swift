@@ -15,12 +15,14 @@ class Transfer {
         address: String,
         contentType: String,
         parameters: [String: Any],
-        completion: @escaping (String) -> ()) {
+        requestMethod: String,
+        completion: @escaping ([[String: Any]]
+        , [String: Any], String) -> ()) {
         let url = URL(string: address)!
         var request = URLRequest(url: url)
 //        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
 //        request.setValue("application/" + contentType, forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
+        request.httpMethod = requestMethod
 //        let parameters: [String: Any] = [
 //            "id": 13,
 //            "name": "Jack & Jill"
@@ -28,19 +30,21 @@ class Transfer {
 //        request.httpBody = parameters.percentEncoded()
         
         var responseString: String = ""
+        var responseArray: [[String: Any]] = [[:]]
+        var responseObject: [String: Any] = [:]
 //        var responseArray: [String: Any] = [:]
         
-        if (contentType == "json") {
+        if (contentType == "json" && requestMethod != "GET") {
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
             } catch let error {
 //                print(error.localizedDescription)
                 responseString = error.localizedDescription
-                return completion(responseString)
+                return completion(responseArray, responseObject, responseString)
             }
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
         }
-
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("*/*", forHTTPHeaderField: "Accept")
         request.addValue("application/" + contentType, forHTTPHeaderField: "Content-Type")
 
 //        let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -51,7 +55,7 @@ class Transfer {
                 error == nil else {                                              // check for fundamental networking error
 //                print("error", error ?? "Unknown error")
                     responseString = "error " + error.debugDescription
-                    completion(responseString)
+                    completion(responseArray, responseObject, responseString)
                     return
             }
             
@@ -60,20 +64,24 @@ class Transfer {
                     //create json object from data
                     if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
 //                        print(json)
-//                        responseArray = json
+                        responseObject = json
                         responseString = json.description
-                        completion(responseString)
+                        completion(responseArray, responseObject, responseString)
                         // handle json...
+                    }else if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String: Any]] {
+                        responseString = json.description
+                        responseArray = json
+                        completion(responseArray, responseObject, responseString)
                     }
                 } catch let error {
 //                    print(error.localizedDescription)
-                    responseString = error.localizedDescription
+                    responseString = "error response = \(error.localizedDescription)"
 //                    return
-                    completion(responseString)
+                    completion(responseArray, responseObject, responseString)
                 }
             }else {
                 responseString = String(data: data, encoding: .utf8) ?? ""
-                completion(responseString)
+                completion(responseArray, responseObject, responseString)
 //                print("responseString = \(String(describing: responseString))")
             }
 
@@ -81,13 +89,13 @@ class Transfer {
 //                print("statusCode should be 2xx, but is \(response.statusCode)")
 //                print("response = \(response)")
                 responseString = "error response = \(response)"
-                completion(responseString)
+                completion(responseArray, responseObject, responseString)
                 return
             }
         })
 
         task.resume()
-        completion(responseString)
+        completion(responseArray, responseObject, responseString)
     }
     
 }
