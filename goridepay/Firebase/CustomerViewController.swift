@@ -16,6 +16,8 @@ class CustomerViewController: UIViewController {
     @IBOutlet weak var lifestyleImageView: UIImageView!
     @IBOutlet weak var propertyImageView: UIImageView!
     
+    var currentPrefs: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +44,7 @@ class CustomerViewController: UIViewController {
             (responseArray, responseObject, responseString) in
                 // parse array here
             if let prefs = responseArray[0]["prefs"] as? String {
+                self.currentPrefs = prefs
                 for i in 0..<prefs.split(separator: ",").count {
                     switch (prefs.split(separator: ",")[i]) {
                     case "1":
@@ -127,32 +130,39 @@ class CustomerViewController: UIViewController {
         }
 //        let prefs = parameters.description
         let prefs = parameters.joined(separator: ",")
-//        print(prefs)
-        let session = URLSession.shared
-        let requests: [String: String] = [
-            "prefs": prefs
-        ]
-//        let uuid = UIDevice.current.identifierForVendor!.uuidString
-        var uuid = UUID().uuidString
-        if (uuid != "8DBB1431-7503-4406-B1AD-D00408250727") {
-            print("CANNOT USE UUID")
-            uuid = "8DBB1431-7503-4406-B1AD-D00408250727"
-        }
-        Transfer().callHeroku(
-            session: session,
-            address: "https://product-goridepay.herokuapp.com/customers/" + uuid,
-//            contentType: "x-www-form-urlencoded",
-            contentType: "json",
-            parameters: requests,
-            requestMethod: "PUT"
-        ) {
-            (responseArray, responseObject, responseString) in
-            if (responseString.split(separator: " ").count > 1 &&
-                responseString.split(separator: " ")[0] != "error") {
-                DispatchQueue.main.async {
-                    self.navigationController!.pushViewController(BroadcastTableViewController(nibName: "BroadcastTableViewController", bundle: nil), animated: true)
+        let vc = BroadcastTableViewController(nibName: "BroadcastTableViewController", bundle: nil)
+        if (currentPrefs != prefs) {
+    //        print(prefs)
+            vc.prefs = prefs
+            let session = URLSession.shared
+            let requests: [String: String] = [
+                "prefs": prefs
+            ]
+    //        let uuid = UIDevice.current.identifierForVendor!.uuidString
+            var uuid = UUID().uuidString
+            if (uuid != "8DBB1431-7503-4406-B1AD-D00408250727") {
+                print("CANNOT USE UUID")
+                uuid = "8DBB1431-7503-4406-B1AD-D00408250727"
+            }
+            Transfer().callHeroku(
+                session: session,
+                address: "https://product-goridepay.herokuapp.com/customers/" + uuid,
+    //            contentType: "x-www-form-urlencoded",
+                contentType: "json",
+                parameters: requests,
+                requestMethod: "PUT"
+            ) {
+                (responseArray, responseObject, responseString) in
+                if (responseString.split(separator: " ").count > 1 &&
+                    responseString.split(separator: " ")[0] != "error") {
+                    DispatchQueue.main.async {
+                        self.navigationController!.pushViewController(vc, animated: true)
+                    }
                 }
             }
+        }else {
+            vc.prefs = currentPrefs
+            self.navigationController!.pushViewController(vc, animated: true)
         }
     }
     

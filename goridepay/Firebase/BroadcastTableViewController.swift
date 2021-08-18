@@ -12,6 +12,9 @@ class BroadcastTableViewController: UITableViewController {
         
     @IBOutlet var advertisementsTableView: UITableView!
     
+    var prefs: String?
+    var advertisements: [[String: Any]] = [[:]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +23,32 @@ class BroadcastTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         exitButton()
+        getAdvertisements()
+    }
+    
+    func getAdvertisements() {
+        let session = URLSession.shared
+        Transfer().callHeroku(
+            session: session,
+            address: "https://product-goridepay.herokuapp.com/advertisements",
+            contentType: "json",
+            parameters: [:],
+            requestMethod: "GET"
+        ) {
+            (responseArray, responseObject, responseString) in
+                // parse array here
+            for i in 0..<responseArray.count {
+                if let currentPrefs = responseArray[i]["tag"] as? String {
+                    for j in 0..<self.prefs!.split(separator: ",").count {
+                        if String(self.prefs!.split(separator: ",")[j])
+                            == currentPrefs {
+                            self.advertisements.append(responseArray[i])
+                        }
+                    }
+                }
+            }
+//            print(self.advertisements)
+        }
     }
     
     func exitButton() {
