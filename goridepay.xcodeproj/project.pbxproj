@@ -25,6 +25,10 @@
 		A14411AA26BC4E0A00DA8E6F /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */; };
 		A14C887E26CAD03700CE05CD /* BroadcastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C887C26CAD03700CE05CD /* BroadcastTableViewController.swift */; };
 		A14C887F26CAD03700CE05CD /* BroadcastTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14C887D26CAD03700CE05CD /* BroadcastTableViewController.xib */; };
+		A1B3EA5426D1703500A42388 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3EA5226D1703500A42388 /* BrowserViewController.swift */; };
+		A1B3EA5526D1703500A42388 /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1B3EA5326D1703500A42388 /* BrowserViewController.xib */; };
+		A1B3EA5826D172D200A42388 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3EA5626D172D100A42388 /* PositionViewController.swift */; };
+		A1B3EA5926D172D200A42388 /* PositionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1B3EA5726D172D100A42388 /* PositionViewController.xib */; };
 		A1F44C3E26BDAAE600DB7819 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */; };
 		A1F44C3F26BDAAE600DB7819 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */; };
 		A1FAEDC326B5CBD70071616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FAEDC226B5CBD70071616B /* AppDelegate.swift */; };
@@ -55,6 +59,10 @@
 		A14411A826BC4E0A00DA8E6F /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		A14C887C26CAD03700CE05CD /* BroadcastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastTableViewController.swift; sourceTree = "<group>"; };
 		A14C887D26CAD03700CE05CD /* BroadcastTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BroadcastTableViewController.xib; sourceTree = "<group>"; };
+		A1B3EA5226D1703500A42388 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		A1B3EA5326D1703500A42388 /* BrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowserViewController.xib; sourceTree = "<group>"; };
+		A1B3EA5626D172D100A42388 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
+		A1B3EA5726D172D100A42388 /* PositionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PositionViewController.xib; sourceTree = "<group>"; };
 		A1F44C3C26BDAAE600DB7819 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		A1F44C3D26BDAAE600DB7819 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		A1FAEDBF26B5CBD70071616B /* goridepay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goridepay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +147,17 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		A1B3EA5126D16FFB00A42388 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				A1B3EA5226D1703500A42388 /* BrowserViewController.swift */,
+				A1B3EA5326D1703500A42388 /* BrowserViewController.xib */,
+				A1B3EA5626D172D100A42388 /* PositionViewController.swift */,
+				A1B3EA5726D172D100A42388 /* PositionViewController.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		A1FAEDB626B5CBD60071616B = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +177,7 @@
 		A1FAEDC126B5CBD70071616B /* goridepay */ = {
 			isa = PBXGroup;
 			children = (
+				A1B3EA5126D16FFB00A42388 /* New Group */,
 				A11448AD26C54DAE00ADA22E /* Firebase */,
 				A14411A626BC4DE900DA8E6F /* Text */,
 				A118074A26B711D30066E519 /* Utils */,
@@ -251,8 +271,10 @@
 				A11448B526C55CBE00ADA22E /* CustomerViewController.xib in Resources */,
 				A1FAEDCC26B5CBD90071616B /* Assets.xcassets in Resources */,
 				A14C887F26CAD03700CE05CD /* BroadcastTableViewController.xib in Resources */,
+				A1B3EA5926D172D200A42388 /* PositionViewController.xib in Resources */,
 				A118074526B6F95F0066E519 /* EntranceViewController.xib in Resources */,
 				A1F44C3F26BDAAE600DB7819 /* ChatTableViewCell.xib in Resources */,
+				A1B3EA5526D1703500A42388 /* BrowserViewController.xib in Resources */,
 				A11448B126C54DCF00ADA22E /* MerchantViewController.xib in Resources */,
 				A1FAEDCA26B5CBD70071616B /* Main.storyboard in Resources */,
 			);
@@ -267,6 +289,7 @@
 			files = (
 				A118074C26B711F20066E519 /* Utility.swift in Sources */,
 				A11448B726C56D3000ADA22E /* Transfer.swift in Sources */,
+				A1B3EA5426D1703500A42388 /* BrowserViewController.swift in Sources */,
 				A1FAEDC726B5CBD70071616B /* ViewController.swift in Sources */,
 				A14C887E26CAD03700CE05CD /* BroadcastTableViewController.swift in Sources */,
 				A14411A926BC4E0A00DA8E6F /* ChatViewController.swift in Sources */,
@@ -279,6 +302,7 @@
 				A118074426B6F95F0066E519 /* EntranceViewController.swift in Sources */,
 				A1F44C3E26BDAAE600DB7819 /* ChatTableViewCell.swift in Sources */,
 				A118074826B708EE0066E519 /* LandingViewController.swift in Sources */,
+				A1B3EA5826D172D200A42388 /* PositionViewController.swift in Sources */,
 				A118073A26B6F45C0066E519 /* ChannelCell.swift in Sources */,
 				A11448B026C54DCF00ADA22E /* MerchantViewController.swift in Sources */,
 			);

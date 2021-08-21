@@ -52,6 +52,8 @@ class BroadcastTableViewController: UITableViewController {
     }
     
     func exitButton() {
+        advertisementsTableView.dataSource = self
+        advertisementsTableView.delegate = self
         self.navigationItem.rightBarButtonItem = self.editButtonItem
 //        let exitGestureRecognizer = UITapGestureRecognizer(target: self, action:
 //            #selector(exitApp(tapGestureRecognizer:)))

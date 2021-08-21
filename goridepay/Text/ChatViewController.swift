@@ -21,12 +21,13 @@ class ChatViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         chatBox()
+        stagingMessages()
     }
     
     func chatBox() {
-        chatTableView.dataSource = self as? UITableViewDataSource
-        chatTableView.delegate = self as? UITableViewDelegate
-        self.chatTableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
+        chatTableView.dataSource = self
+        chatTableView.delegate = self
+        self.chatTableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "MessageCell")
     }
 
     @IBAction func editButton(_ sender: UIButton) {
@@ -34,27 +35,28 @@ class ChatViewController: UIViewController {
     }
     
     func stagingMessages() {
-        let url = URL(string: "https://account-goridepay.herokuapp.com/api/v1/202001/messages")!
-
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            do {
-                let json : NSDictionary = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                if let items = json["available_messages"] as? [[String:AnyObject]] {
-                    for item in items {
-                      // construct your model objects here
-                      self.messagesList.append(Message(dictionary:item))
-                    }
-                    DispatchQueue.main.async {
-                        self.chatTableView.reloadData()
-                    }
+        let session = URLSession.shared
+        Transfer().callHeroku(
+            session: session,
+            address: "https://account-goridepay.herokuapp.com/api/v1/202001/messages",
+            contentType: "json",
+            parameters: [:],
+            requestMethod: "GET"
+        ) {
+            (responseArray, responseObject, responseString) in
+                // parse array here
+            if let items = responseObject["available_messages"] as? [[String:AnyObject]] {
+                for item in items {
+                  // construct your model objects here
+                  self.messagesList.append(Message(dictionary:item))
                 }
-            } catch {
-                print(String(data: data, encoding: .utf8)!)
+                DispatchQueue.main.async {
+                    self.chatTableView.reloadData()
+                }
+            }else {
+                print(responseObject)
             }
         }
-
-        task.resume()
     }
     
     /*
@@ -67,6 +69,29 @@ class ChatViewController: UIViewController {
     }
     */
 
+}
+
+extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as? ChatTableViewCell else {return UITableViewCell()}
+
+        // Configure the cell...
+        cell.senderLabel.text = String(messagesList[indexPath.row].senderId) + " "
+            + String(messagesList[indexPath.row].id) + " "
+            + String(messagesList[indexPath.row].attachmentId)
+        cell.messageLabel.text = messagesList[indexPath.row].text + " "
+            + messagesList[indexPath.row].secretKey
+        let createdAt = Transfer().parseDate(createdAt: messagesList[indexPath.row].createdAt)
+        cell.createdLabel.text = createdAt
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messagesList.count
+    }
+    
 }
 
 class Message {

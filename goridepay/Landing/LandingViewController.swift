@@ -18,6 +18,8 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var assitiveImageView: UIImageView!
     @IBOutlet weak var podcastImageView: UIImageView!
     @IBOutlet weak var cloudImageView: UIImageView!
+    @IBOutlet weak var compassImageView: UIImageView!
+    @IBOutlet weak var findImageView: UIImageView!
     @IBOutlet weak var assitiveView: UIView!
     @IBOutlet var dragView: UIView!
     @IBOutlet weak var safeView: UIImageView!
@@ -32,6 +34,30 @@ class LandingViewController: UIViewController {
         messageApp()
         photoApp()
         cloudApp()
+        exploreApp()
+        gpsApp()
+    }
+    
+    func gpsApp() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action:
+            #selector(friendsTapped(tapGestureRecognizer:)))
+        findImageView.isUserInteractionEnabled = true
+        findImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func friendsTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.navigationController!.pushViewController(PositionViewController(nibName: "PositionViewController", bundle: nil), animated: true)
+    }
+    
+    func exploreApp() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action:
+            #selector(compassTapped(tapGestureRecognizer:)))
+        compassImageView.isUserInteractionEnabled = true
+        compassImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func compassTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.navigationController!.pushViewController(BrowserViewController(nibName: "BrowserViewController", bundle: nil), animated: true)
     }
     
     func cloudApp() {

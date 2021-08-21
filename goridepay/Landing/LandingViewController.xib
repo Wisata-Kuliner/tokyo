@@ -13,8 +13,10 @@
                 <outlet property="assitiveView" destination="9Mz-in-0yt" id="b6o-oX-3HI"/>
                 <outlet property="cameraImageView" destination="SRG-I9-O8B" id="A67-e9-OPN"/>
                 <outlet property="cloudImageView" destination="WwW-05-9Wi" id="i57-gX-5WS"/>
+                <outlet property="compassImageView" destination="hwZ-h4-q3G" id="rb6-cD-cPB"/>
                 <outlet property="contactImageView" destination="8Jq-cV-XEU" id="MpW-sD-Qie"/>
                 <outlet property="dragView" destination="i5M-Pr-FkT" id="xWq-7T-sJX"/>
+                <outlet property="findImageView" destination="fk8-4V-Dw7" id="btm-94-OQq"/>
                 <outlet property="lockImageView" destination="qnW-Cw-UPm" id="dSi-ii-fXJ"/>
                 <outlet property="messageImageView" destination="rMl-eB-riX" id="msH-tt-YxT"/>
                 <outlet property="photoImageView" destination="9Nn-uB-0JF" id="w9Q-UR-tjP"/>
